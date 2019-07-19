@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+   <title>Simple Map</title>
+   <meta name="viewport" content="initial-scale=1.0">
+   <meta charset="utf-8">
+   <script
+       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4FP6G_FHqMd-pUMFizFY9_bOMmjkpqeU&libraries=geometry,places&callback=initMap"
+       async defer></script>
+   <style>
+       /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+       #map {
+           height: 50%;
+           width: 50%
+       }
+
+       /* Optional: Makes the sample page fill the window. */
+       html,
+       body {
+           height: 100%;
+           margin: 0;
+           padding: 0;
+       }
+   </style>
+</head>
+
+<body>
+   <div id="map"></div>
+
+
+   <script>
+
+       var map;
+       var myAddress = {
+           lat: 39.105040, lng: -94.436050
+       };
+       var school = {
+           lat: 38.898320, lng: -94.723640
+       };
+       var kansasCity = {
+           lat: 39.09973, lng: -94.57857
+       };
+
+
+
+
+
+
+       function initMap() {
+
+
+           map = new google.maps.Map(document.getElementById('map'), {
+               center: { lat: 39.09973, lng: -94.57857 },
+               zoom: 10
+           });
+
+
+
+           var marker = new google.maps.Marker({ position: myAddress, map: map });
+           var marker1 = new google.maps.Marker({ position: school, map: map });
+
+
+           // var distanceBetween = google.maps.geometry.spherical.computeDistanceBetween(marker, marker1);
+           // console.log(distanceBetween);
+
+           var _kCord = new google.maps.LatLng(myAddress.lat, myAddress.lng);
+           var _pCord = new google.maps.LatLng(school.lat, school.lng);
+
+           var centerPosition = google.maps.geometry.spherical.interpolate(_kCord, _pCord, 0.5)
+           var marker2 = new google.maps.Marker({ position: centerPosition, map: map });
+
+           var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(_kCord, _pCord);
+
+           var distanceToMiles = distanceInMeters * 0.000621371;
+
+           console.log(google.maps.geometry.spherical.computeDistanceBetween(_kCord, _pCord));
+           console.log(distanceToMiles);
+
+
+
+       }
+   </script>
+
+</body>
+
+</html>
