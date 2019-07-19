@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!--HEADER-->
+        <div class="row headerBackground">
+            <div class="col logo">SPOT</div>
+        </div>
+        <!--MAIN-->
+        <div class="row centerBackground">
+            <div class="col form">
+                <form>
+                    <div class="form-group">
+                        <label for="userInput" class="userInputLabel">User Location</label>
+                        <input type="search" class="form-control" id="userInput"
+                            placeholder="Enter User Location &target;">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="friendInput" class="friendInputLabel">Friend Location</label>
+                        <input type="search" class="form-control" id="userInput"
+                            placeholder="Enter Friend Location &target;">
+                    </div>
+                    <div class="form-group">
+                        <label for="locationRadius" class="locationLabel">Select Meetup Location Radius</label>
+                        <select class="form-control" id="locationRadius" class="locationInputTab">
+                            <option>1 Miles</option>
+                            <option>2 Miles</option>
+                            <option>3 Miles</option>
+                            <option>4 Miles </option>
+                            <option>5 Miles</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-danger">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!--FOOTER-->
+        <footer class="row footer">
+            <div class="col footerText">Copyright&copy;</div>
+
+        </footer>
+    </div>
+
+    <!--SCRIPT-->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="assets/javascript/app.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>

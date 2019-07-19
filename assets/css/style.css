@@ -1,0 +1,71 @@
+.headerBackground{
+    background-image: url(../images/1-.jpg);
+}
+
+.logo{
+    text-align: center;
+    color:rgb(151, 36, 36);
+    font-size: 500%;
+}
+
+.centerBackground{
+    background-image: url(../images/red-bar-black-white-red.jpg);
+    background-size: 100%;
+}
+
+.userInputLabel{
+    background-color:rgb(151, 36, 36);
+    color: whitesmoke;
+    width: 9.5%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-color: grey;
+}
+
+.friendInputLabel{
+    background-color:rgb(151, 36, 36);
+    color: whitesmoke;
+    width: 11%;
+    text-align: center;
+    margin-bottom: 0%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-color: grey;
+}
+
+.locationLabel{
+    background-color:rgb(151, 36, 36);
+    color: whitesmoke;
+    width: 21%;
+    text-align: initial;
+    padding-left: .5%;
+    margin-bottom: 0%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-color: grey; 
+}
+
+.form-control{
+    border: 2px solid rgb(151, 36, 36);
+    border-top-left-radius: 0%;
+}
+
+.btn-danger{
+    border-color: 0%;
+    background-color: rgb(151, 36, 36);
+    color: whitesmoke;
+    margin-bottom: 1%;
+
+}
+
+
+.footerText{
+    background-image: url(../images/1-.jpg);
+    color: white;
+    text-align: center;
+    font-size: 100%;
+    height: 500%;
+}
