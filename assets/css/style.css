@@ -1,17 +1,4 @@
-.headerBackground{
-    background-image: url(../images/1-.jpg);
-}
-
-.logo{
-    text-align: center;
-    color:rgb(151, 36, 36);
-    font-size: 500%;
-    font-family: 'Righteous', cursive;
-    font-family: 'Raleway', sans-serif;
-
-}
-
-.centerBackground{
+.container{
     background-image: url(../images/red-bar-black-white-red.jpg);
     background-size: 100%;
 }
@@ -57,24 +44,50 @@
 }
 
 .btn-secondary{
-    border-color: 0%;
+    border: 0px;
     background-color: rgb(151, 36, 36);
     color: whitesmoke;
     margin-bottom: 1%;
 }
+
 .btn-danger{
-    border-color: 0%;
+    border: 0px;
     background-color: rgb(151, 36, 36);
     color: whitesmoke;
     margin-bottom: 1%;
-
 }
 
+.dropdownCol{
+padding-bottom: 2%;
+}
+
+.map{
+    border-top: 1px solid  rgb(151, 36, 36);
+    background-image: url(../images/google-map.jpg);
+    color: whitesmoke;
+    height: 350px;
+    border-bottom: 2px solid  rgb(151, 36, 36);
+}
+
+#listHeader{
+    margin-top: 3%;
+    padding: top 1%;
+    border: 0px;
+    background-color: rgb(151, 36, 36);
+}
+
+tr{
+    background-color: grey;
+}
+
+.footerCol{
+    border-top: 2px solid  rgb(151, 36, 36);
+    padding:0%;
+}
 
 .footerText{
     background-image: url(../images/1-.jpg);
     color: white;
     text-align: center;
     font-size: 100%;
-    height: 500%;
 }
