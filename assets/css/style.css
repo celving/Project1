@@ -110,6 +110,13 @@ padding-bottom: 2%;
     background-color: rgb(151, 36, 36);
 }
 
+#weatherHeader{
+    margin-top: 3%;
+    padding: top 1%;
+    border: 0px;
+    background-color: rgb(151, 36, 36);
+}
+
 .table{
     margin-left: 0%;
 }
