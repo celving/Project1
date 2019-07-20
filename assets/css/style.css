@@ -3,6 +3,25 @@
     background-size: 100%;
 }
 
+.containerBack{
+    background-color: rgba(0, 0, 0, 0.466);
+}
+
+.logo{
+    font-size: 200%;
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.logoText{
+    font-size: 100%;
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 4%;
+}
+
 .userInputLabel{
     background-color:rgb(151, 36, 36);
     color: whitesmoke;
@@ -38,8 +57,24 @@
     border-color: grey; 
 }
 
+::-webkit-input-placeholder{
+    color: red;
+}
+:-ms-input-placeholder{
+    color: red;
+}
+::-moz-placeholder{
+    color:red;
+    opacity: 1;
+}
+:-moz-placeholder{
+    color: red;
+    opacity: 1;
+}
+
 .form-control{
-    border: 2px solid rgb(151, 36, 36);
+    background-color: grey;
+    border: 1.25px solid rgb(151, 36, 36);
     border-top-left-radius: 0%;
 }
 
@@ -61,7 +96,7 @@
 padding-bottom: 2%;
 }
 
-.map{
+#googleMap{
     border-top: 1px solid  rgb(151, 36, 36);
     background-image: url(../images/google-map.jpg);
     color: whitesmoke;
@@ -76,18 +111,23 @@ padding-bottom: 2%;
     background-color: rgb(151, 36, 36);
 }
 
+.table{
+    margin-left: 0%;
+}
+
 tr{
     background-color: grey;
 }
 
 .footerCol{
     border-top: 2px solid  rgb(151, 36, 36);
-    padding:0%;
+    background-image: url(../images/1-.jpg);
+    padding:5%;
+
 }
 
 .footerText{
-    background-image: url(../images/1-.jpg);
     color: white;
     text-align: center;
-    font-size: 100%;
+    font-size: 300%;
 }
