@@ -6,17 +6,14 @@
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4FP6G_FHqMd-pUMFizFY9_bOMmjkpqeU&libraries=geometry,places&callback=initMap"
         async defer></script>
-
     <style>
         /* Always set the map height explicitly to define the size of the div
-      * element that contains the map. */
+       * element that contains the map. */
         #map {
-            height: 80%;
-            width: 80%
+            height: 100%;
         }
 
         /* Optional: Makes the sample page fill the window. */
@@ -30,26 +27,12 @@
 </head>
 
 <body>
-    <form id="addressForm">
-
-        <label for="address1">First Address</label>
-        <input type="text" id="address1">
-        <button id="submitButton" type="submit">Submit</button>
-        <br>
-
-    </form>
-
-
     <div id="map"></div>
 
 
     <script>
 
-
-
-
         var map;
-
         var myAddress = {
             lat: 39.105040, lng: -94.436050
         };
@@ -60,19 +43,6 @@
             lat: 39.09973, lng: -94.57857
         };
 
-        // Funtions made to covert meters to miles, and miles to meters 
-        function convertToMiles(x) {
-            var miles = x * 0.000621371;
-
-            return miles;
-
-        };
-
-        function convertToMeters(x) {
-            var meters = x * 1609.344;
-
-            return meters;
-        };
 
 
 
@@ -105,66 +75,12 @@
 
             var distanceToMiles = distanceInMeters * 0.000621371;
 
+            console.log(google.maps.geometry.spherical.computeDistanceBetween(_kCord, _pCord));
+            console.log(distanceToMiles);
 
 
 
-            var circleMarker = new google.maps.Marker({
-                map: map,
-                position: centerPosition,
-                title: 'Some location'
-            });
-
-            // Add circle overlay and bind to marker
-
-
-            var circle = new google.maps.Circle({
-                map: map,
-                radius: convertToMeters(distanceToMiles / 4),    // 10 miles in metres
-                fillColor: '#AA0000'
-            });
-
-            circle.bindTo('center', circleMarker, 'position');
-
-            var address1 = $('#address1').val().trim();
-            var geocoder = new google.maps.Geocoder();
-            var googleMaps = new google.maps.Geocoder();
-
-            var addressConverter = geocoder.geocode({ 'address': address1 }, function (results, status) {
-
-                console.log(results);
-                console.log(status);
-                console.log(results.geometry.location.lat);
-                console.log(results.geometry.location.lng);
-
-
-
-
-
-
-            });
-
-
-
-
-            //format of an example address that needs to be put in
-            //     1600+Amphitheatre+Parkway,+Mountain+View,+CA
-
-
-
-
-
-
-
-
-
-
-        };
-
-
-
-
-        // Create marker 
-
+        }
     </script>
 
 </body>

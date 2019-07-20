@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>test2</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4FP6G_FHqMd-pUMFizFY9_bOMmjkpqeU&libraries=geometry,places&callback=initMap"
+        async defer></script>
+
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+        #map {
+            height: 50%;
+            width: 50%
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="addressForm">
+        <label for="address1">First Address</label>
+        <input type="text" id="address1">
+        <button type="submit">Submit</button>
+        <br>
+    </form>
+
+
+    <div id="map"></div>
+
+
+    <script>
+
+        var map;
+
+        // Funtions made to covert meters to miles, and miles to meters 
+        function convertToMiles(meters) {
+            var miles = meters * 0.000621371;
+
+            return miles;
+
+        };
+
+        function convertToMeters(miles) {
+            var meters = miles * 1609.344;
+
+            return meters;
+        };
+
+        var firstAddress;
+
+        $('#addressForm').on('submit', function () {
+            event.preventDefault();
+            firstAddress = $('#address1').val().trim();
+            console.log(firstAddress);
+            initMap();
+
+
+        });
+
+
+
+
+
+
+        function initMap() {
+
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 39.09973, lng: -94.57857 },
+                zoom: 10
+            });
+
+
+
+
+
+            var address1 = "420 S Forest Ave, Independence, MO"
+            var geocoder = new google.maps.Geocoder();
+            var googleMaps = new google.maps.Geocoder();
+
+
+
+            var addressConverter = geocoder.geocode({ 'address': firstAddress }, function (results, status) {
+
+                console.log(status);
+                var lat = results[0].geometry.viewport.na.j;
+                var lng = results[0].geometry.viewport.ga.j;
+                var geoAddress = { lat: lat, lng: lng };
+                var marker = new google.maps.Marker({ position: geoAddress, map: map });
+
+
+            });
+
+
+
+
+
+            //format of an example address that needs to be put in
+            //     1600+Amphitheatre+Parkway,+Mountain+View,+CA
+
+        };
+
+
+
+
+        // Create marker 
+
+    </script>
+
+</body>
+
+</html>
