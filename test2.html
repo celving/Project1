@@ -59,6 +59,18 @@
             return meters;
         };
 
+        var firstAddress;
+
+        $('#addressForm').on('submit', function () {
+            event.preventDefault();
+            firstAddress = $('#address1').val().trim();
+            console.log(firstAddress);
+            initMap();
+
+
+        });
+
+
 
 
 
@@ -73,13 +85,15 @@
 
 
 
+
+
             var address1 = "420 S Forest Ave, Independence, MO"
             var geocoder = new google.maps.Geocoder();
             var googleMaps = new google.maps.Geocoder();
 
 
 
-            var addressConverter = geocoder.geocode({ 'address': address1 }, function (results, status) {
+            var addressConverter = geocoder.geocode({ 'address': firstAddress }, function (results, status) {
 
                 console.log(status);
                 var lat = results[0].geometry.viewport.na.j;
@@ -90,15 +104,6 @@
 
             });
 
-            $('#addressForm').on('submit', function () {
-                event.preventDefault();
-                var firstAddress = $('#address1').val().trim();
-                console.log(firstAddress);
-
-
-
-
-            });
 
 
 
