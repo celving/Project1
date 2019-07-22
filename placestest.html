@@ -40,6 +40,14 @@
 
     <div id="map"></div>
 
+    <table id="info-table">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Rating</th>
+        </tr>
+    </table>
+
 
     <script>
 
@@ -87,7 +95,6 @@
                 var lat = results[0].geometry.viewport.na.j;
                 var lng = results[0].geometry.viewport.ga.j;
                 var geoAddress = { lat: lat, lng: lng };
-                var marker = new google.maps.Marker({ position: geoAddress, map: map });
                 var address = new google.maps.LatLng(lat, lng)
 
                 infowindow = new google.maps.InfoWindow();
@@ -104,6 +111,8 @@
                     if (status === google.maps.places.PlacesServiceStatus.OK) {
                         for (var i = 0; i < results.length; i++) {
                             createMarker(results[i]);
+                            makeRow(results[i]);
+                            console.log(results[i]);
                         }
 
                         map.setCenter(results[0].geometry.location);
@@ -123,6 +132,20 @@
                     infowindow.open(map, this);
                 });
             }
+
+
+            function makeRow(place) {
+                var tableRow = $("<tr>").append(
+                    $("<td>").text(place.name),
+                    $("<td>").text(place.vicinity),
+                    $("<td>").text(place.rating + " stars"),
+
+
+                );
+
+                $("#info-table").append(tableRow);
+
+            };
 
             //format of an example address that needs to be put in
             //     1600+Amphitheatre+Parkway,+Mountain+View,+CA

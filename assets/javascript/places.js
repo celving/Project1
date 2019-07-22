@@ -1,25 +1,39 @@
 function createPlaces(){
 
-    var searchType = $()
+    var searchType = $();
 
 
     var request = {
-        location: midAddress,
+        location: centerPoint,
         radius: ["1000"],
-        type: [searchType]
+        type: searchType
     };
 
     service = new google.maps.places.PlacesService(map);
 
     service.nearbySearch(request, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
+            for (var i = 0; i < 10; i++) {
                 createMarker(results[i]);
+                makeRow(results[i]);
             }
 
             map.setCenter(results[0].geometry.location);
         };
     });
+
+};
+
+function makeRow(place) {
+    var tableRow = $("<tr>").append(
+        $("<td>").text(place.name),
+        $("<td>").text(place.vicinity),
+        $("<td>").text(place.rating + " stars"),
+
+
+    );
+
+    $(".resultTable").append(tableRow);
 
 };
 
