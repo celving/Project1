@@ -52,6 +52,7 @@ $(document).ready(function () {
 
         function logAddresses() {
 
+            var userMarkerIcon = "https://img.icons8.com/ios-filled/50/000000/user-location.png";
             var centerPosition;
 
             var addressConverterOne = geocoder.geocode({ 'address': firstAddress }, function (results, status) {
@@ -62,7 +63,7 @@ $(document).ready(function () {
                 lng1 = results[0].geometry.viewport.ga.j;
                 centerMarker.push(lat1, lng1);
                 var geoAddress = { lat: lat1, lng: lng1 };
-                marker1 = new google.maps.Marker({ position: geoAddress, map: map });
+                marker1 = new google.maps.Marker({ position: geoAddress, map: map, icon: userMarkerIcon });
 
                 $('#userInput').val("");
                 $('#userInput').empty();
@@ -77,7 +78,7 @@ $(document).ready(function () {
                 lng2 = results[0].geometry.viewport.ga.j;
                 centerMarker.push(lat2, lng2);
                 var geoAddress = { lat: lat2, lng: lng2 };
-                marker2 = new google.maps.Marker({ position: geoAddress, map: map });
+                marker2 = new google.maps.Marker({ position: geoAddress, map: map, icon: userMarkerIcon });
 
                 $('#userInput').val("");
                 $('#userInput').empty();
@@ -153,7 +154,8 @@ $(document).ready(function () {
         function createMarker(place) {
             var marker = new google.maps.Marker({
                 map: map,
-                position: place.geometry.location
+                position: place.geometry.location,
+                animation: google.maps.Animation.DROP
             });
 
             google.maps.event.addListener(marker, 'click', function () {
