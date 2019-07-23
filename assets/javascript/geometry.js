@@ -1,10 +1,15 @@
+
+
+
+
 $(document).ready(function () {
 
-    function initMap() {
+    function theSpot() {
 
-        var map;
-
-
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+            center: { lat: 39.09973, lng: -94.57857 },
+            zoom: 10
+        });
 
         // Funtions made to covert meters to miles, and miles to meters 
         function convertToMiles(meters) {
@@ -36,12 +41,6 @@ $(document).ready(function () {
         });
 
 
-        map = new google.maps.Map(document.getElementById('googleMap'), {
-            center: { lat: 39.09973, lng: -94.57857 },
-            zoom: 10
-        });
-
-
         var geocoder = new google.maps.Geocoder();
 
         var lat1;
@@ -51,6 +50,7 @@ $(document).ready(function () {
         var centerMarker = [];
 
         function logAddresses() {
+            var userMarkerIcon = "https://img.icons8.com/ios-filled/50/000000/user-location.png";
 
             var centerPosition;
 
@@ -62,7 +62,11 @@ $(document).ready(function () {
                 lng1 = results[0].geometry.viewport.ga.j;
                 centerMarker.push(lat1, lng1);
                 var geoAddress = { lat: lat1, lng: lng1 };
-                marker1 = new google.maps.Marker({ position: geoAddress, map: map });
+                marker1 = new google.maps.Marker({
+                    position: geoAddress,
+                    map: map,
+                    icon: userMarkerIcon
+                });
 
                 $('#userInput').val("");
                 $('#userInput').empty();
@@ -77,7 +81,11 @@ $(document).ready(function () {
                 lng2 = results[0].geometry.viewport.ga.j;
                 centerMarker.push(lat2, lng2);
                 var geoAddress = { lat: lat2, lng: lng2 };
-                marker2 = new google.maps.Marker({ position: geoAddress, map: map });
+                marker2 = new google.maps.Marker({
+                    position: geoAddress,
+                    map: map,
+                    icon: userMarkerIcon
+                });
 
                 $('#userInput').val("");
                 $('#userInput').empty();
@@ -153,10 +161,11 @@ $(document).ready(function () {
         function createMarker(place) {
             var marker = new google.maps.Marker({
                 map: map,
-                position: place.geometry.location
+                position: place.geometry.location,
+                animation: google.maps.Animation.DROP
             });
 
-            google.maps.event.addListener(marker, 'click', function () {
+            google.maps.event.addListener('click', marker, function () {
                 infowindow.setContent(place.name);
                 infowindow.open(map, this);
             });
@@ -170,6 +179,6 @@ $(document).ready(function () {
 
     };
 
-    initMap();
+    theSpot();
 
 });
