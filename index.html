@@ -2,23 +2,25 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>THE Spot</title>
+    <title>THE SPOT</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Lato:300|Roboto&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="assets/images/tab_icon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
+        integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
 
     <!--SCRIPT LINKS-->
-
-
-
-
 
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
 
@@ -27,6 +29,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4FP6G_FHqMd-pUMFizFY9_bOMmjkpqeU&libraries=geometry,places&callback=initMap"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -38,49 +41,49 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
-    <script src="assets/javascript/geometry.js"></script>
-
-
-
-
-
-
-
+    <script src="assets/javascript/app.js"></script>
 
 </head>
 
-<body>
 
+<body>
 
     <div class="container">
 
         <div class="row containerBack">
             <div class="col containerBlack">
-                <!--ROW1LOGO-->
-                <div class="row logo">
-                    <div class="col">
-                        <div class="logo">LOGO</div>
-                        <div class="logoText">LET'S FIND YOUR SPOT</div>
+
+                <!--ROW Logo-->
+                <span class="logoStart">THE SP</span>
+
+                <img src='assets/images/tab_icon.png' class="animated bounceInDown logoSymbol">
+
+                <span class="logoEnd">T</span>
+
+                <div class="row slogan">
+                    <div class="col-lg-12">
+                        <div class=" animated slideInRight logoText">LET'S FIND YOUR SPOT</div>
                     </div>
                 </div>
+
                 <!--ROW2-->
                 <div class="row form">
-                    <div class="col form">
+                    <div class="col-lg-12 col-md-12 form">
                         <form>
-                            <div class="form-group">
-                                <label for="userInput" class="userInputLabel">User Location</label>
+                            <div class="animated slideInLeft form-group">
+                                <label for="userInput" class="userInputLabel">User Address</label>
                                 <input type="search" class="form-control" id="userInput"
-                                    placeholder="Enter User Location &target;">
+                                    placeholder="Enter User  SP📍T">
                             </div>
 
-                            <div class="form-group">
-                                <label for="friendInput" class="friendInputLabel">Friend Location</label>
+                            <div class="animated slideInLeft form-group">
+                                <label for="friendInput" class="friendInputLabel">Friend Address</label>
                                 <input type="search" class="form-control" id="friendInput"
-                                    placeholder="Enter Friend Location &target;">
+                                    placeholder="Enter Friend  SP📍T">
                             </div>
-                            <div class="form-group">
-                                <label for="locationRadius" class="locationLabel">Select Meetup Location Radius</label>
+
+                            <div class="animated slideInLeft form-group">
+                                <label for="locationRadius" class="locationLabel">Select SPOT Location Radius</label>
                                 <select class="form-control" id="locationRadius" class="locationInputTab">
                                     <option>1 Miles</option>
                                     <option>2 Miles</option>
@@ -89,51 +92,25 @@
                                     <option>5 Miles</option>
                                 </select>
                             </div>
+
                             <div class="row justify-content-around dropdown">
-                                <div class="col-lg-3 dropdownCol">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                <div class="col-lg-6 dropdownCol">
+                                    <a class="animated bounceIn btn btn-secondary dropdown-toggle" href="#"
+                                        role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        Restaurant
+                                        SPOT Categories
                                     </a>
 
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" href="#">Restaurants</a>
+                                        <a class="dropdown-item" href="#">Cafes</a>
+                                        <a class="dropdown-item" href="#">Bars</a>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-3 dropdownCol">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Cafe
-                                    </a>
-
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 dropdownCol">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Bar
-                                    </a>
-
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 submit">
-                                    <button id="addressSubmit" type="button" class="btn btn-danger">Submit</button>
+                                <div class="col-lg-6 submit">
+                                    <button id="addressSubmit" type="submit"
+                                        class="animated bounceIn btn btn-danger">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -142,41 +119,40 @@
                 </div>
 
                 <!--ROW3-->
-                <div class="row map">
-                    <div class="col-lg-12 map">
+                <div class="row justify-content-center map">
+                    <div class="col map">
                         <div id="googleMap"></div>
                     </div>
                 </div>
+
                 <!--ROW4-->
-                <div class="row justify-content-center table">
-                    <div class="col-lg-12 table">
+                <div class="row justify-content-between table">
+                    <div class="col table">
                         <ul class="list-group">
-                            <li class="list-group-item active" id="listHeader">RESULTS</li>
+                            <li class="list-group-item active" id="listHeader">SPOT Results</li>
                             <table class="resultTable">
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Phone Number</th>
+                                    <th>SPOT Name</th>
+                                    <th>SPOT Address</th>
                                 </tr>
+
                             </table>
                         </ul>
                     </div>
                 </div>
 
-
-
-                <div class="row justify-content-center table">
-                    <div class="col-lg-12 table">
+                <!--ROW6 FOOTER-->
+                <div class="row justify-content-between table">
+                    <div class="col table">
                         <ul class="list-group">
-                            <li class="list-group-item active" id="weatherHeader">WEATHER</li>
+                            <li class="list-group-item active" id="weatherHeader">SPOT Weather</li>
                             <table class="WeatherTable">
                                 <tr>
                                     <th>Temperature</th>
                                     <th>Temperature max</th>
                                     <th>Temperature min</th>
                                     <th>Wind</th>
-                                    <th>Forecast</th>
-                                    <th>Humidity</th>
+                                    <th>Pressure</th>
                                 </tr>
 
                             </table>
@@ -184,26 +160,32 @@
                     </div>
                 </div>
 
+                <!--ROW7 FOOTER-->
+                <div class="row justify-content-around footer">
+                    <div class="col footerCol">
+                        <p class="creatorTextBold">Created by:</pr>
+                            <p class="creatorText">Colin Elving</pr>
+                                <p class="creatorText">Maha Shevata</pr>
+                                    <p class="creatorText">Joe Castillo</pr>
+                                        <p class="creatorText">Ricardo Perdomo</p>
+                    </div>
 
-                <!--ROW5 FOOTER-->
-                <div class="row footer">
-                    <div class="col-lg-12 footerCol">
+                    <div class="col footerCol">
                         <footer class="footerText">Copyright &copy;</footer>
                     </div>
-                </div>
 
+                    <div class="col blocks">
+                        <div href="#" class="block1"></div>
+                        <div href="#" class="block2"></div>
+                        <div href="#" class="block3"></div>
+                        <div href="#" class="block4"></div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="assets/javascript/weather.js" type="text/javascript"></script>
-
 </body>
-
-
-
-
-
-
 
 </html>
