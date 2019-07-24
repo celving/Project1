@@ -7,25 +7,45 @@
     background-color: rgba(0, 0, 0, 0.466);
 }
 
-.logo{
-    font-size: 200%;
-    text-align: center;
+/* ROW Logo*/
+
+.logoStart{
+    font-family: 'Cabin', sans-serif;
+    font-size: 900%;
     color: whitesmoke;
-    padding-top: 2%;
-    padding-bottom: 1%;
+    margin-left: 18%;
+}
+
+.logoSymbol{
+    animation-duration: 3s;
+    animation-delay: .25s;
+    animation-iteration-count: initial;
+    max-width: 10%;
+    margin-bottom: 8%;
+}
+
+.logoEnd{
+    font-family: 'Cabin', sans-serif;
+    font-size: 900%;
+    color: whitesmoke;
+    margin-left: 0%
 }
 
 .logoText{
-    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 200%;
     text-align: center;
     color: whitesmoke;
     padding-bottom: 4%;
 }
 
+/*ROW2*/
+
 .userInputLabel{
+    font-family: 'Roboto', sans-serif;
     background-color:rgb(151, 36, 36);
     color: whitesmoke;
-    width: 9.5%;
+    width: 22%;
     text-align: center;
     margin-top: 1%;
     margin-bottom: 0%;
@@ -35,9 +55,10 @@
 }
 
 .friendInputLabel{
+    font-family: 'Roboto', sans-serif;
     background-color:rgb(151, 36, 36);
     color: whitesmoke;
-    width: 11%;
+    width: 22%;
     text-align: center;
     margin-bottom: 0%;
     border-top-left-radius: 5px;
@@ -46,10 +67,11 @@
 }
 
 .locationLabel{
+    font-family: 'Roboto', sans-serif;
     background-color:rgb(151, 36, 36);
     color: whitesmoke;
-    width: 21%;
-    text-align: initial;
+    width: 22%;
+    text-align: center;
     padding-left: .5%;
     margin-bottom: 0%;
     border-top-left-radius: 5px;
@@ -57,28 +79,18 @@
     border-color: grey; 
 }
 
-::-webkit-input-placeholder{
-    color: red;
-}
-:-ms-input-placeholder{
-    color: red;
-}
-::-moz-placeholder{
-    color:red;
-    opacity: 1;
-}
-:-moz-placeholder{
-    color: red;
-    opacity: 1;
-}
-
 .form-control{
-    background-color: grey;
+    background-color: rgb(187, 187, 187);
     border: 1.25px solid rgb(151, 36, 36);
     border-top-left-radius: 0%;
 }
 
 .btn-secondary{
+    width: 100%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: initial;
+    font-family: 'Roboto', sans-serif;
     border: 0px;
     background-color: rgb(151, 36, 36);
     color: whitesmoke;
@@ -86,6 +98,11 @@
 }
 
 .btn-danger{
+    width: 100%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: initial;
+    font-family: 'Roboto', sans-serif;
     border: 0px;
     background-color: rgb(151, 36, 36);
     color: whitesmoke;
@@ -96,6 +113,8 @@
 padding-bottom: 2%;
 }
 
+/*ROW3*/
+
 #googleMap{
     border-top: 1px solid  rgb(151, 36, 36);
     color: whitesmoke;
@@ -103,7 +122,10 @@ padding-bottom: 2%;
     border-bottom: 2px solid  rgb(151, 36, 36);
 }
 
+/*ROW4,5,6,7*/
+
 #listHeader{
+    font-family: 'Roboto', sans-serif;
     margin-top: 3%;
     padding: top 1%;
     border: 0px;
@@ -111,6 +133,7 @@ padding-bottom: 2%;
 }
 
 #weatherHeader{
+    font-family: 'Roboto', sans-serif;
     margin-top: 3%;
     padding: top 1%;
     border: 0px;
@@ -122,18 +145,307 @@ padding-bottom: 2%;
 }
 
 tr{
-    background-color: grey;
+    background-color: rgb(187, 187, 187);}
+
+th{
+    font-family: 'Roboto', sans-serif;
+    font-size:90%;
 }
 
-.footerCol{
+td{
+    font-family: 'Lato', sans-serif;
+}
+
+.footer{
     border-top: 2px solid  rgb(151, 36, 36);
     background-image: url(../images/1-.jpg);
     padding:5%;
-
+    background-size: 100%;
 }
 
 .footerText{
+    font-family: 'Cabin', sans-serif;
     color: white;
     text-align: center;
-    font-size: 300%;
+    font-size: 250%;
+}
+
+.creatorTextBold{
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+    margin: 0%;
+}
+
+.creatorText{
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    margin: 0%;
+}
+
+.block1{
+    border-radius: 3px;
+    background-color: whitesmoke;
+    width: 15%;
+    height:15%;
+    margin-top: 4%;
+    margin-left: 70%;
+}
+
+.block2{
+    border-radius: 3px;
+    background-color:rgb(151, 36, 36);
+    width: 15%;
+    height:15%;
+    margin-left: 70%;
+    margin-top: 4%;
+}
+
+.block3{
+    border-radius: 3px;
+    background-color:rgb(187, 187, 187);
+    width: 15%;
+    height:15%;
+    margin-left: 70%;
+    margin-top: 4%;
+}
+
+.block4{
+    border-radius: 3px;
+    background-color:rgb(250, 233, 136);
+    width: 15%;
+    height:15%;
+    margin-left: 70%;
+    margin-top: 4%;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width:1200px){
+    .logoStart{
+        font-family: 'Cabin', sans-serif;
+        font-size: 900%;
+        color: whitesmoke;
+        margin-left: 18%;
+    }
+    
+    .logoSymbol{
+        animation-duration: 3s;
+        animation-delay: .25s;
+        animation-iteration-count: initial;
+        max-width: 10%;
+        margin-bottom: 8%;
+    }
+    
+    .logoEnd{
+        font-family: 'Cabin', sans-serif;
+        font-size: 900%;
+        color: whitesmoke;
+        margin-left: 0%
+    }
+
+    #googleMap{
+        border-top: 1px solid  rgb(151, 36, 36);
+        color: whitesmoke;
+        height: 350px;
+        border-bottom: 2px solid  rgb(151, 36, 36);
+    }
+
+    .footerText{
+        font-family: 'Cabin', sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 225%;
+    }
+}
+
+
+@media (max-width:1024px){
+    .logoStart{
+        font-family: 'Cabin', sans-serif;
+        font-size: 900%;
+        color: whitesmoke;
+        margin-left: 14%;
+    }
+    
+    .logoSymbol{
+        animation-duration: 3s;
+        animation-delay: .25s;
+        animation-iteration-count: initial;
+        max-width: 13%;
+        margin-bottom: 11%;
+    }
+    
+    .logoEnd{
+        font-family: 'Cabin', sans-serif;
+        font-size: 900%;
+        color: whitesmoke;
+        margin-left: 0%
+    }
+
+    #googleMap{
+        border-top: 1px solid  rgb(151, 36, 36);
+        color: whitesmoke;
+        height: 350px;
+        border-bottom: 2px solid  rgb(151, 36, 36);
+    }
+
+    .table th{
+        font-family: 'Roboto', sans-serif;
+        font-size:10%;
+        padding: 2%;
+    }
+
+    .footerText{
+        font-family: 'Cabin', sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 225%;
+    }
+}
+
+
+@media (max-width:991px){
+    .logoStart{
+        font-family: 'Cabin', sans-serif;
+        font-size: 700%;
+        color: whitesmoke;
+        margin-left: 11%;
+    }
+    
+    .logoSymbol{
+        animation-duration: 3s;
+        animation-delay: .25s;
+        animation-iteration-count: initial;
+        max-width: 13%;
+        margin-bottom: 11%;
+    }
+    
+    .logoEnd{
+        font-family: 'Cabin', sans-serif;
+        font-size: 700%;
+        color: whitesmoke;
+        margin-left: 0%
+    }
+
+    #googleMap{
+        border-top: 1px solid  rgb(151, 36, 36);
+        color: whitesmoke;
+        height: 350px;
+        border-bottom: 2px solid  rgb(151, 36, 36);
+    }
+
+    .table th{
+        font-family: 'Roboto', sans-serif;
+        font-size:9%;
+        padding: 2%;
+    }
+
+    .footerText{
+        font-family: 'Cabin', sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 225%;
+    }
+}
+
+
+@media (max-width:768px){
+    .logoStart{
+        font-family: 'Cabin', sans-serif;
+        font-size: 450%;
+        color: whitesmoke;
+        margin-left: 25%;
+    }
+
+    .logoSymbol{
+        animation-duration: 3s;
+        animation-delay: .25s;
+        animation-iteration-count: initial;
+        max-width: 8%;
+        margin-bottom: 7%;
+    }
+    
+    .logoEnd{
+        font-family: 'Cabin', sans-serif;
+        font-size: 450%;
+        color: whitesmoke;
+        margin-left: 0%
+    }
+
+    #googleMap{
+        border-top: 1px solid  rgb(151, 36, 36);
+        color: whitesmoke;
+        height: 350px;
+        border-bottom: 2px solid  rgb(151, 36, 36);
+    }
+
+    .table th{
+        font-family: 'Roboto', sans-serif;
+        font-size:10%;
+        padding: 2%;
+    }
+
+    .footerText{
+        font-family: 'Cabin', sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 225%;
+    }
+}
+
+
+@media (max-width:375px){
+    .logoStart{
+        font-family: 'Cabin', sans-serif;
+        font-size: 300%;
+        color: whitesmoke;
+        margin-left: 18%;
+    }
+    
+    .logoSymbol{
+        animation-duration: 3s;
+        animation-delay: .25s;
+        animation-iteration-count: initial;
+        max-width: 10%;
+        margin-bottom: 8%;
+    }
+    
+    .logoEnd{
+        font-family: 'Cabin', sans-serif;
+        font-size: 300%;
+        color: whitesmoke;
+        margin-left: 0%
+    }
+    
+    .logoText{
+        font-family: 'Lato', sans-serif;
+        font-size: 100%;
+        text-align: center;
+        color: whitesmoke;
+        padding-bottom: 4%;
+    }
+    
+    #googleMap{
+        border-top: 1px solid  rgb(151, 36, 36);
+        color: whitesmoke;
+        height: 200px;
+        border-bottom: 2px solid  rgb(151, 36, 36);
+    }
+
+    .table th{
+        font-family: 'Roboto', sans-serif;
+        font-size:1%;
+        padding: 2%;
+    }
+
+    p{
+        font-size: 1%;
+    }
+
+    .footerText{
+        font-family: 'Cabin', sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 100%;
+    }
 }
