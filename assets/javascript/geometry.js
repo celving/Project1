@@ -101,126 +101,126 @@ $(document).ready(function () {
                 var _pCord = new google.maps.LatLng(centerMarker[2], centerMarker[3]);
 
                 centerPosition = google.maps.geometry.spherical.interpolate(_kCord, _pCord, 0.5);
-               
-                  weatherLat = (centerPosition.lat());
-                               weatherLng = (centerPosition.lng());
+
+                weatherLat = (centerPosition.lat());
+                weatherLng = (centerPosition.lng());
 
 
-                               function weather(){
+                function weather() {
 
-                                var APIKey = "9e67c1fdc41149f9fdf182a3eabe03a8";
-                                
-                                // Here we are building the URL we need to query the database
-                                var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat="+ weatherLat+"&lon="+weatherLng+"&units=imperial&appid=" + APIKey;
-                                
-                                  
-                                  $.ajax({
-                                    url: queryURL,
-                                    method: "GET"
-                                  })
-                                    // We store all of the retrieved data inside of an object called "response"
-                                    .then(function(response) {
-                                
-                                      // Log the queryURL
-                                      console.log(queryURL);
-                                
-                                      // Log the resulting object
-                                      console.log(response);
-                                      // Transfer content to HTML
-                                
-                                      var temperature = Math.ceil(response.main.temp);
-                                      var mintemp = Math.ceil(response.main.temp_min);
-                                      var maxtemp = Math.ceil(response.main.temp_max);
-                                      var wind = Math.ceil(response.wind.speed);
-                                      var humid = Math.ceil(response.main.humidity);
-                                      var newRow = $("<tr>").append(
-                                        $("<td>").text(temperature),
-                                        $("<td>").text(maxtemp),
-                                        $("<td>").text(mintemp),
-                                        $("<td>").text(wind),
-                                        $("<td>").text(response.weather[0].description),
-                                        $("<td>").text(humid)
-                                      );
-                                    
-                                      // Append the new row to the table
-                                      $(".WeatherTable").append(newRow);
-                                    });
-                                
-                                  } 
-                                
-                                  
-                             weather();
+                    var APIKey = "9e67c1fdc41149f9fdf182a3eabe03a8";
+
+                    // Here we are building the URL we need to query the database
+                    var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + weatherLat + "&lon=" + weatherLng + "&units=imperial&appid=" + APIKey;
+
+
+                    $.ajax({
+                        url: queryURL,
+                        method: "GET"
+                    })
+                        // We store all of the retrieved data inside of an object called "response"
+                        .then(function (response) {
+
+                            // Log the queryURL
+                            console.log(queryURL);
+
+                            // Log the resulting object
+                            console.log(response);
+                            // Transfer content to HTML
+
+                            var temperature = Math.ceil(response.main.temp);
+                            var mintemp = Math.ceil(response.main.temp_min);
+                            var maxtemp = Math.ceil(response.main.temp_max);
+                            var wind = Math.ceil(response.wind.speed);
+                            var humid = Math.ceil(response.main.humidity);
+                            var newRow = $("<tr>").append(
+                                $("<td>").text(temperature),
+                                $("<td>").text(maxtemp),
+                                $("<td>").text(mintemp),
+                                $("<td>").text(wind),
+                                $("<td>").text(response.weather[0].description),
+                                $("<td>").text(humid)
+                            );
+
+                            // Append the new row to the table
+                            $(".WeatherTable").append(newRow);
+                        });
+
+                }
+
+
+                weather();
             };
 
 
+            function createPlaces(place) {
 
-
-
-
-
-
-
-        };
-
-        function createPlaces(place) {
-
-            var searchType = $();
-
-
-            var request = {
-                location: place,
-                radius: ["1000"],
-                type: "restaurant"
-            };
-
-            service = new google.maps.places.PlacesService(map);
-
-            service.nearbySearch(request, function (results, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    for (var i = 0; i < 10; i++) {
-                        createMarker(results[i]);
-                        makeRow(results[i]);
-                    }
-
-                    map.setCenter(results[0].geometry.location);
+                var searchType = $();
+    
+    
+                var request = {
+                    location: place,
+                    radius: ["1000"],
+                    type: "restaurant"
                 };
-            });
-
+    
+                service = new google.maps.places.PlacesService(map);
+    
+                service.nearbySearch(request, function (results, status) {
+                    if (status === google.maps.places.PlacesServiceStatus.OK) {
+                        for (var i = 0; i < 10; i++) {
+                            createMarker(results[i]);
+                            makeRow(results[i]);
+                        }
+    
+                        map.setCenter(results[0].geometry.location);
+                    };
+                });
+    
+            };
+    
+            function makeRow(place) {
+                var tableRow = $("<tr>").append(
+                    $("<td>").text(place.name),
+                    $("<td>").text(place.vicinity),
+                    $("<td>").text(place.formatted_phone_number),
+    
+    
+                );
+    
+                $(".resultTable").append(tableRow);
+    
+            };
+    
+            function createMarker(place) {
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location,
+                    animation: google.maps.Animation.DROP
+                });
+    
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.setContent(place.name);
+                    infowindow.open(map, this);
+                });
+            };
+    
+    
+    
+    
+    
+    
+    
         };
 
-        function makeRow(place) {
-            var tableRow = $("<tr>").append(
-                $("<td>").text(place.name),
-                $("<td>").text(place.vicinity),
-                $("<td>").text(place.formatted_phone_number),
 
 
-            );
 
-            $(".resultTable").append(tableRow);
+
 
         };
-
-        function createMarker(place) {
-            var marker = new google.maps.Marker({
-                map: map,
-                position: place.geometry.location,
-                animation: google.maps.Animation.DROP
-            });
-
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.setContent(place.name);
-                infowindow.open(map, this);
-            });
-        };
-
 
         
-
-
-
-
-    };
 
     initMap();
 
