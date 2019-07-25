@@ -1,46 +1,25 @@
-var spotCategory = "restaurant"
-
-
-
-// Funtions made to covert meters to miles, and miles to meters 
-function convertToMiles(meters) {
-    var miles = meters * 0.000621371;
-
-    return miles;
-
-};
-
-function convertToMeters(miles) {
-    var meters = miles * 1609.344;
-
-    return meters;
-};
-
-
-
 $(document).ready(function () {
-
-    var searchRadiusVar = Math.floor(convertToMeters(parseInt($("#locationRadius").val()))).toString();
-
-
-    $("#restaurant-button").on("click", function(){
-        spotCategory = "restaurant"
-    });
-
-    $("#cafe-button").on("click", function(){
-        spotCategory = "cafe"
-    });
-
-    $("#bar-button").on("click", function(){
-        spotCategory = "bar"
-    });
-
-
 
     function initMap() {
 
         var map;
-        
+
+
+
+        // Funtions made to covert meters to miles, and miles to meters 
+        function convertToMiles(meters) {
+            var miles = meters * 0.000621371;
+
+            return miles;
+
+        };
+
+        function convertToMeters(miles) {
+            var meters = miles * 1609.344;
+
+            return meters;
+        };
+
         var firstAddress;
         var secondAddress;
         var addressArray = [];
@@ -175,63 +154,57 @@ $(document).ready(function () {
 
 
             function createPlaces(place) {
-    
-                var searchRadius = searchRadiusVar;
+
+                var searchType = $();
+
 
                 var request = {
                     location: place,
-                    radius: searchRadius,
-                    type: spotCategory
+                    radius: ["1000"],
+                    type: "restaurant"
                 };
-    
+
                 service = new google.maps.places.PlacesService(map);
-    
+
                 service.nearbySearch(request, function (results, status) {
                     if (status === google.maps.places.PlacesServiceStatus.OK) {
                         for (var i = 0; i < 10; i++) {
                             createMarker(results[i]);
                             makeRow(results[i]);
                         }
-    
+
                         map.setCenter(results[0].geometry.location);
                     };
                 });
-    
+
             };
-    
+
             function makeRow(place) {
                 var tableRow = $("<tr>").append(
                     $("<td>").text(place.name),
                     $("<td>").text(place.vicinity),
                     $("<td>").text(place.formatted_phone_number),
-    
-    
+
+
                 );
-    
+
                 $(".resultTable").append(tableRow);
-    
+
             };
-    
+
             function createMarker(place) {
                 var marker = new google.maps.Marker({
                     map: map,
                     position: place.geometry.location,
                     animation: google.maps.Animation.DROP
                 });
-    
+
                 google.maps.event.addListener(marker, 'click', function () {
                     infowindow.setContent(place.name);
                     infowindow.open(map, this);
                 });
             };
-    
-    
-    
-    
-    
-    
-    
-        };
+
 
 
 
@@ -240,9 +213,43 @@ $(document).ready(function () {
 
         };
 
-        
+        function initAutocompleteuser() {
+            // Create the autocomplete object, restricting the search predictions to
+            // geographical location types.
+            autocomplete = new google.maps.places.Autocomplete(
+                document.getElementById('userInput'), { types: ['geocode'] });
+
+            // Avoid paying for data that you don't need by restricting the set of
+            // place fields that are returned to just the address components.
+            autocomplete.setFields(['address_component']);
+
+        }
+
+        function initAutocompletefriend() {
+            // Create the autocomplete object, restricting the search predictions to
+            // geographical location types.
+            autocomplete = new google.maps.places.Autocomplete(
+                document.getElementById('friendInput'), { types: ['geocode'] });
+
+            // Avoid paying for data that you don't need by restricting the set of
+            // place fields that are returned to just the address components.
+            autocomplete.setFields(['address_component']);
+
+        }
+
+
+        initAutocompleteuser();
+        initAutocompletefriend();
+
+
+
+
+
+
+    };
+
+
 
     initMap();
 
 });
-
