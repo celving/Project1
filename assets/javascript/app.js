@@ -1,25 +1,46 @@
+var spotCategory = "restaurant"
+
+
+
+// Funtions made to covert meters to miles, and miles to meters 
+function convertToMiles(meters) {
+    var miles = meters * 0.000621371;
+
+    return miles;
+
+};
+
+function convertToMeters(miles) {
+    var meters = miles * 1609.344;
+
+    return meters;
+};
+
+
+
 $(document).ready(function () {
+
+    var searchRadiusVar = Math.floor(convertToMeters(parseInt($("#locationRadius").val()))).toString();
+
+
+    $("#restaurant-button").on("click", function(){
+        spotCategory = "restaurant"
+    });
+
+    $("#cafe-button").on("click", function(){
+        spotCategory = "cafe"
+    });
+
+    $("#bar-button").on("click", function(){
+        spotCategory = "bar"
+    });
+
+
 
     function initMap() {
 
         var map;
-
-
-
-        // Funtions made to covert meters to miles, and miles to meters 
-        function convertToMiles(meters) {
-            var miles = meters * 0.000621371;
-
-            return miles;
-
-        };
-
-        function convertToMeters(miles) {
-            var meters = miles * 1609.344;
-
-            return meters;
-        };
-
+        
         var firstAddress;
         var secondAddress;
         var addressArray = [];
@@ -154,14 +175,13 @@ $(document).ready(function () {
 
 
             function createPlaces(place) {
+    
+                var searchRadius = searchRadiusVar;
 
-                var searchType = $();
-    
-    
                 var request = {
                     location: place,
-                    radius: ["1000"],
-                    type: "restaurant"
+                    radius: searchRadius,
+                    type: spotCategory
                 };
     
                 service = new google.maps.places.PlacesService(map);
