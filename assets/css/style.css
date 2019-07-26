@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(71, 70, 70);
+}
 .container{
     background-image: url(../images/red-bar-black-white-red.jpg);
     background-size: 100%;
