@@ -120,10 +120,11 @@ padding-bottom: 2%;
     border-bottom: 2px solid  rgb(151, 36, 36);
 }
 
+/*ROW3,4,5,6,7*/
+
 .submitReset{
     margin-top: 2%;
 }
-/*ROW4,5,6,7*/
 
 #listHeader{
     font-family: 'Roboto', sans-serif;
@@ -151,7 +152,7 @@ tr{
 
 th{border-left: 1px solid rgba(151, 36, 36, 0.226);
     font-family: 'Roboto', sans-serif;
-    font-size:110%;
+    font-size: 18px;
 }
 
 td{
@@ -243,6 +244,11 @@ td{
         border-bottom: 2px solid  rgb(151, 36, 36);
     }
 
+    th{
+        font-size: 18px;
+
+    }
+
     .footerText{
         font-family: 'Cabin', sans-serif;
         color: white;
@@ -303,10 +309,8 @@ td{
         border-bottom: 2px solid  rgb(151, 36, 36);
     }
 
-    .table th{
-        font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: 2%;
+    th{
+        font-size: 18px;
     }
 
     .footerText{
@@ -370,10 +374,8 @@ td{
         border-bottom: 2px solid  rgb(151, 36, 36);
     }
 
-    .table th{
-        font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: 2%;
+    th{
+        font-size: 18px;
     }
 
     .footerText{
@@ -468,10 +470,8 @@ td{
         border-bottom: 2px solid  rgb(151, 36, 36);
     }
 
-    .table th{
-        font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: 2%;
+    th{
+        font-size: 18px;
     }
 
     .footerText{
@@ -559,8 +559,7 @@ td{
     }
 
     th{
-        font-family: 'Roboto', sans-serif;
-        font-size:20%;
+        font-size: 12px;
     }
 
     #listHeader{
@@ -672,10 +671,8 @@ td{
     }
 
     th{
-        font-family: 'Roboto', sans-serif;
-        font-size:20%;
+        font-size: 10px;
     }
-
 
     #listHeader{
     font-size: 80%;
@@ -786,8 +783,7 @@ td{
     }
 
     th{
-        font-family: 'Roboto', sans-serif;
-        font-size:20%;
+        font-size: 9px;
     }
 
     #listHeader{
@@ -903,8 +899,7 @@ td{
 
 
     th{
-        font-family: 'Roboto', sans-serif;
-        font-size:20%;
+        font-size: 9px;
     }
 
     #listHeader{
