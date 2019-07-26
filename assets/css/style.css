@@ -120,6 +120,9 @@ padding-bottom: 2%;
     border-bottom: 2px solid  rgb(151, 36, 36);
 }
 
+.submitReset{
+    margin-top: 2%;
+}
 /*ROW4,5,6,7*/
 
 #listHeader{
@@ -138,8 +141,8 @@ padding-bottom: 2%;
     background-color: rgb(151, 36, 36);
 }
 
-.table{
-    margin-left: 0%;
+table{
+    margin-bottom: 2%;
 }
 
 tr{
@@ -148,7 +151,7 @@ tr{
 
 th{border-left: 1px solid rgba(151, 36, 36, 0.226);
     font-family: 'Roboto', sans-serif;
-    font-size:90%;
+    font-size:110%;
 }
 
 td{
@@ -555,14 +558,9 @@ td{
         border-bottom: 2px solid  rgb(151, 36, 36);
     }
 
-    .table{
-        margin-bottom: 1%;
-    }
-
-    .table th{
+    th{
         font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: .5%;
+        font-size:20%;
     }
 
     #listHeader{
@@ -673,14 +671,9 @@ td{
         border-bottom: 2px solid  rgb(151, 36, 36);
     }
 
-    .table{
-        margin-bottom: 1%;
-    }
-
-    .table th{
+    th{
         font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: 0%;
+        font-size:20%;
     }
 
 
@@ -792,14 +785,9 @@ td{
         border-bottom: 2px solid  rgb(151, 36, 36);
     }
 
-    .table{
-        margin-bottom: 1%;
-    }
-
-    .table th{
+    th{
         font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: 0%;
+        font-size:20%;
     }
 
     #listHeader{
@@ -913,15 +901,10 @@ td{
         border-bottom: 2px solid  rgb(151, 36, 36);
     }
 
-    .table{
-        margin-bottom: 1%;
-        padding: 0%;
-    }
 
-    .table th{
+    th{
         font-family: 'Roboto', sans-serif;
-        font-size:9%;
-        padding: 0%;
+        font-size:20%;
     }
 
     #listHeader{
@@ -944,10 +927,6 @@ td{
 
     p{
         font-size: 50%;
-    }
-
-    .table td{
-        padding: 1%;
     }
 
     .footerText{
