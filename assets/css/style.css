@@ -161,6 +161,7 @@ th{border-left: 1px solid rgba(151, 36, 36, 0.226);
     font-size: 1em;
     padding:.5rem;
 
+
 }
 
 td{
@@ -232,6 +233,7 @@ td{
 
 /*RESPONSIVE*/
 
+
 @media (max-width: 768px){
 
     .logoStart{
@@ -255,6 +257,7 @@ td{
     }
     
     .logoText{
+
         font-size: 1.5em;
         padding: 1rem;    
     }
@@ -262,6 +265,7 @@ td{
     .userInputLabel{
     width: 50%;
     padding:.25rem;
+
     }
 
     .friendInputLabel{
