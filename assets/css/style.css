@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(71, 70, 70);
+}
 .container{
     background-image: url(../images/red-bar-black-white-red.jpg);
     background-size: 100%;
@@ -6,6 +9,7 @@
 .containerBack{
     background-color: rgba(0, 0, 0, 0.466);
 }
+
 
 /* ROW Logo*/
 
@@ -31,10 +35,10 @@
 
 .logoText{
     font-family: 'Lato', sans-serif;
-    font-size: 200%;
+    font-size: 2em;
     text-align: center;
     color: whitesmoke;
-    padding-bottom: 4%;
+    padding: 1rem;    
 }
 
 /*ROW2*/
@@ -43,25 +47,27 @@
     font-family: 'Roboto', sans-serif;
     background-color:rgb(151, 36, 36);
     color: whitesmoke;
-    width: 22%;
+    width: 20%;
     text-align: center;
     margin-top: 1%;
     margin-bottom: 0%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-color: grey;
+    padding:.25rem;
 }
 
 .friendInputLabel{
     font-family: 'Roboto', sans-serif;
     background-color:rgb(151, 36, 36);
     color: whitesmoke;
-    width: 22%;
+    width: 20%;
     text-align: center;
     margin-bottom: 0%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-color: grey;
+    padding:.25rem;
 }
 
 .locationLabel{
@@ -70,7 +76,7 @@
     color: whitesmoke;
     width: 22%;
     text-align: center;
-    padding-left: .5%;
+    padding:.25rem;
     margin-bottom: 0%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -120,15 +126,16 @@ padding-bottom: 2%;
     border-bottom: 2px solid  rgb(151, 36, 36);
 }
 
+/*ROW3,4,5,6,7*/
+
 .submitReset{
     margin-top: 2%;
 }
-/*ROW4,5,6,7*/
 
 #listHeader{
     font-family: 'Roboto', sans-serif;
-    margin-top: 3%;
-    padding: top 1%;
+    margin-top: 1.5%;
+    padding:.5rem;
     border: 0px;
     background-color: rgb(151, 36, 36);
 }
@@ -136,7 +143,7 @@ padding-bottom: 2%;
 #weatherHeader{
     font-family: 'Roboto', sans-serif;
     margin-top: 1%;
-    padding: top 1%;
+    padding:.5rem;
     border: 0px;
     background-color: rgb(151, 36, 36);
 }
@@ -151,17 +158,20 @@ tr{
 
 th{border-left: 1px solid rgba(151, 36, 36, 0.226);
     font-family: 'Roboto', sans-serif;
-    font-size:110%;
+    font-size: 1em;
+    padding:.5rem;
+
 }
 
 td{
+    padding:.5rem;
     font-family: 'Lato', sans-serif;
 }
 
 .footer{
     border-top: 2px solid  rgb(151, 36, 36);
     background-image: url(../images/1-.jpg);
-    padding:5%;
+    padding:.5rem;
     background-size: 100%;
 }
 
@@ -169,7 +179,7 @@ td{
     font-family: 'Cabin', sans-serif;
     color: white;
     text-align: center;
-    font-size: 250%;
+    font-size: 2em;
 }
 
 .creatorTextBold{
@@ -222,717 +232,191 @@ td{
 
 /*RESPONSIVE*/
 
-@media (max-width:1200px){
-    .logoStart{
-        margin-left: 32%;
-    }
-    
-    .logoSymbol{
-        max-width: 10%;
-        margin-bottom: 3%;
-    }
-    
-    .logoEnd{
-        margin-left: 0%
-    }
-
-    #googleMap{
-        border-top: 1px solid  rgb(151, 36, 36);
-        color: whitesmoke;
-        height: 350px;
-        border-bottom: 2px solid  rgb(151, 36, 36);
-    }
-
-    .footerText{
-        font-family: 'Cabin', sans-serif;
-        color: white;
-        text-align: center;
-        font-size: 225%;
-    }
-}
-
-
-@media (max-width:1100px){
+@media (max-width: 768px){
 
     .logoStart{
-        max-width: 20%;
-        margin-left: 31%;
+        max-width: 25%;
+        margin-left: 25%;
     }
     
     .logoSymbol{
         animation-duration: 3s;
         animation-delay: .25s;
         animation-iteration-count: initial;
-        max-width: 8%;
+        max-width: 11%;
         margin-bottom: 2%;
         margin-left: 1%;
         margin-top: 2%;
     }
     
     .logoEnd{
-        max-width: 5%;
+        max-width: 6%;
         margin-left: 1%;
     }
     
     .logoText{
-        font-family: 'Lato', sans-serif;
-        font-size: 200%;
-        text-align: center;
-        color: whitesmoke;
-        padding-bottom: 4%;
+        font-size: 1.5em;
+        padding: 1rem;    
     }
-    
+
+    .userInputLabel{
+    width: 50%;
+    padding:.25rem;
+    }
+
+    .friendInputLabel{
+    width: 50%;
+    padding:.25rem;
+    }
+
     .locationLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 22%;
-        text-align: center;
-        padding-left: .5%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey; 
-        font-size: 80%;
-    }
-
-    #googleMap{
-        border-top: 1px solid  rgb(151, 36, 36);
-        color: whitesmoke;
-        height: 350px;
-        border-bottom: 2px solid  rgb(151, 36, 36);
-    }
-
-    .table th{
-        font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: 2%;
+    width: 100%;
+    padding:.25rem;
+   
     }
 
     .footerText{
-        font-family: 'Cabin', sans-serif;
-        color: white;
-        text-align: center;
-        font-size: 225%;
+        font-size: .75em;
+    }
+
+    .creatorTextBold{
+        font-size: .50em;
+        margin: 0%;
+    }
+
+    .creatorText{
+        font-size: .25em;
+        margin: 0%;
+    }
+
+    .block1{
+        border-radius: 3px;
+        background-color: whitesmoke;
+        width: 15%;
+        height:15%;
+        margin-top: 4%;
+        margin-left: 70%;
+    }
+
+    .block2{
+        border-radius: 3px;
+        background-color:rgb(151, 36, 36);
+        width: 15%;
+        height:15%;
+        margin-left: 70%;
+        margin-top: 4%;
+    }
+
+    .block3{
+        border-radius: 3px;
+        background-color:rgb(187, 187, 187);
+        width: 15%;
+        height:15%;
+        margin-left: 70%;
+        margin-top: 4%;
+    }
+
+    .block4{
+        border-radius: 3px;
+        background-color:rgb(250, 233, 136);
+        width: 15%;
+        height:15%;
+        margin-left: 70%;
+        margin-top: 4%;
     }
 }
 
 
-@media (max-width:1024px){
+@media (max-width: 320px){
 
     .logoStart{
-        max-width: 20%;
-        margin-left: 31%;
+        max-width: 25%;
+        margin-left: 25%;
     }
     
     .logoSymbol{
         animation-duration: 3s;
         animation-delay: .25s;
         animation-iteration-count: initial;
-        max-width: 8%;
+        max-width: 11%;
         margin-bottom: 2%;
         margin-left: 1%;
         margin-top: 2%;
     }
     
     .logoEnd{
-        max-width: 5%;
+        max-width: 6%;
         margin-left: 1%;
-    
     }
     
     .logoText{
-        font-family: 'Lato', sans-serif;
-        font-size: 200%;
-        text-align: center;
-        color: whitesmoke;
-        padding-bottom: 4%;
-    }
-    
-    .locationLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 22%;
-        text-align: center;
-        padding-left: .5%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey; 
-        font-size: 80%;
-    }
-
-    #googleMap{
-        border-top: 1px solid  rgb(151, 36, 36);
-        color: whitesmoke;
-        height: 350px;
-        border-bottom: 2px solid  rgb(151, 36, 36);
-    }
-
-    .table th{
-        font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: 2%;
-    }
-
-    .footerText{
-        font-family: 'Cabin', sans-serif;
-        color: white;
-        text-align: center;
-        font-size: 225%;
-    }
-}
-
-
-
-
-
-@media (max-width:768px){
-    .logoStart{
-        font-family: 'Cabin', sans-serif;
-        font-size: 450%;
-        color: whitesmoke;
-        margin-left: 30%;
-        margin-top: 2%;
-    }
-
-    .logoSymbol{
-        animation-duration: 3s;
-        animation-delay: .25s;
-        animation-iteration-count: initial;
-        max-width: 8%;
-        margin-bottom: 5%;
-        margin-top: 7%;
-    }
-    
-    .logoEnd{
-        font-family: 'Cabin', sans-serif;
-        font-size: 450%;
-        color: whitesmoke;
-        margin-left: 0%;
-        margin-top: 2%;
+        font-size: 1.5em;
+        padding: 1rem;    
     }
 
     .userInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 20%;
-        text-align: center;
-        margin-top: 1%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 90%;
-        padding-bottom: .5%;
-        padding-top: .5%;
+    width: 50%;
+    padding:.25rem;
     }
-    
+
     .friendInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 20%;
-        text-align: center;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 90%;
-        padding-bottom: .5%;
-        padding-top: .5%;
+    width: 50%;
+    padding:.25rem;
     }
 
     .locationLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 22%;
-        text-align: center;
-        padding-left: .5%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey; 
-        font-size: 67%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-
-    #googleMap{
-        border-top: 1px solid  rgb(151, 36, 36);
-        color: whitesmoke;
-        height: 350px;
-        border-bottom: 2px solid  rgb(151, 36, 36);
-    }
-
-    .table th{
-        font-family: 'Roboto', sans-serif;
-        font-size:10%;
-        padding: 2%;
+    width: 100%;
+    padding:.25rem;
+   
     }
 
     .footerText{
-        font-family: 'Cabin', sans-serif;
-        color: white;
-        text-align: center;
-        font-size: 225%;
-    }
-}
-
-
-@media (max-width:425px){
-
-    .logoStart{
-        margin-left: 30%;
-        margin-top: 2%;
+        font-size: .75em;
     }
 
-    .logoSymbol{
-        animation-duration: 3s;
-        animation-delay: .25s;
-        animation-iteration-count: initial;
-        max-width: 8%;
-        margin-bottom: 5%;
-        margin-top: 7%;
-    }
-    
-    .logoEnd{
-        margin-left: 0%;
-        margin-top: 2%;
+    .creatorTextBold{
+        font-size: .50em;
+        margin: 0%;
     }
 
-    .userInputLabel{
-        font-family: 'Roboto', sans-serif;
+    .creatorText{
+        font-size: .25em;
+        margin: 0%;
+    }
+
+    .block1{
+        border-radius: 3px;
+        background-color: whitesmoke;
+        width: 15%;
+        height:15%;
+        margin-top: 4%;
+        margin-left: 70%;
+    }
+
+    .block2{
+        border-radius: 3px;
         background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 30%;
-        text-align: center;
-        margin-top: 1%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 82%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-    
-    .friendInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 30%;
-        text-align: center;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 82%;
-        padding-bottom: .5%;
-        padding-top: .5%;
+        width: 15%;
+        height:15%;
+        margin-left: 70%;
+        margin-top: 4%;
     }
 
-    .locationLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 40%;
-        text-align: center;
-        padding-left: .5%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey; 
-        font-size: 67%;
-        padding-bottom: .5%;
-        padding-top: .5%;
+    .block3{
+        border-radius: 3px;
+        background-color:rgb(187, 187, 187);
+        width: 15%;
+        height:15%;
+        margin-left: 70%;
+        margin-top: 4%;
     }
 
-    #googleMap{
-        border-top: 1px solid  rgb(151, 36, 36);
-        color: whitesmoke;
-        height: 350px;
-        border-bottom: 2px solid  rgb(151, 36, 36);
-    }
-
-    th{
-        font-family: 'Roboto', sans-serif;
-        font-size:20%;
-    }
-
-    #listHeader{
-    font-size: 80%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 3%;
-    padding: top 1%;
-    border: 0px;
-    background-color: rgb(151, 36, 36);
-    }
-
-    #weatherHeader{
-    font-size: 80%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 1%;
-    padding: top 1%;
-    border: 0px;
-    background-color: rgb(151, 36, 36);
-    }
-
-    p{
-        font-size: 50%;
-    }
-
-    .footerText{
-        font-family: 'Cabin', sans-serif;
-        color: white;
-        text-align: center;
-        font-size: 122%;
-    }
-}
-
-
-@media (max-width:375px){
-
-    .logoStart{
-        margin-left: 26%;
-        margin-top: 2%;
-        max-width: 25%
-    }
-
-    .logoSymbol{
-        animation-duration: 3s;
-        animation-delay: .25s;
-        animation-iteration-count: initial;
-        max-width: 9%;
-        margin-bottom: 5%;
-        margin-top: 7%;
-    }
-    
-    .logoEnd{
-        margin-left: 0%;
-        margin-top: 2%;
-        max-width: 6.5%
-    }
-
-    .userInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 30%;
-        text-align: center;
-        margin-top: 1%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 82%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-    
-    .friendInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 30%;
-        text-align: center;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 82%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-
-    .locationLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 40%;
-        text-align: center;
-        padding-left: .5%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey; 
-        font-size: 60%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-
-    #googleMap{
-        border-top: 1px solid  rgb(151, 36, 36);
-        color: whitesmoke;
-        height: 350px;
-        border-bottom: 2px solid  rgb(151, 36, 36);
-    }
-
-    th{
-        font-family: 'Roboto', sans-serif;
-        font-size:20%;
-    }
-
-
-    #listHeader{
-    font-size: 80%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 3%;
-    padding: top 1%;
-    border: 0px;
-    background-color: rgb(151, 36, 36);
-    }
-
-    #weatherHeader{
-    font-size: 80%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 1%;
-    padding: top 1%;
-    border: 0px;
-    background-color: rgb(151, 36, 36);
-    }
-
-    p{
-        font-size: 50%;
-    }
-
-    .footerText{
-        font-family: 'Cabin', sans-serif;
-        color: white;
-        text-align: center;
-        font-size: 103%;
-    }
-}
-
-
-
-@media (max-width:360px){
-    .logoStart{
-        margin-left: 26%;
-        margin-top: 2%;
-        max-width: 25%
-    }
-
-    .logoSymbol{
-        animation-duration: 3s;
-        animation-delay: .25s;
-        animation-iteration-count: initial;
-        max-width: 9%;
-        margin-bottom: 5%;
-        margin-top: 7%;
-    }
-    
-    .logoEnd{
-        margin-left: 0%;
-        margin-top: 2%;
-        max-width: 6.5%
-    }
-
-    .userInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 30%;
-        text-align: center;
-        margin-top: 1%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 82%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-    
-    .friendInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 30%;
-        text-align: center;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 82%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-
-    .locationLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 40%;
-        text-align: center;
-        padding-left: .5%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey; 
-        font-size: 60%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-
-    #googleMap{
-        border-top: 1px solid  rgb(151, 36, 36);
-        color: whitesmoke;
-        height: 350px;
-        border-bottom: 2px solid  rgb(151, 36, 36);
-    }
-
-    th{
-        font-family: 'Roboto', sans-serif;
-        font-size:20%;
-    }
-
-    #listHeader{
-    font-size: 80%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 3%;
-    padding: top 1%;
-    border: 0px;
-    background-color: rgb(151, 36, 36);
-    }
-
-    #weatherHeader{
-    font-size: 80%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 1%;
-    padding: top 1%;
-    border: 0px;
-    background-color: rgb(151, 36, 36);
-    }
-
-    p{
-        font-size: 50%;
-    }
-
-    .footerText{
-        font-family: 'Cabin', sans-serif;
-        color: white;
-        text-align: center;
-        font-size: 97%;
-    }
-}
-
-
-@media (max-width:320px){
-    .logoStart{
-        margin-left: 26%;
-        margin-top: 2%;
-        max-width: 25%
-    }
-
-    .logoSymbol{
-        animation-duration: 3s;
-        animation-delay: .25s;
-        animation-iteration-count: initial;
-        max-width: 10%;
-        margin-bottom: 5%;
-        margin-top: 7%;
-    }
-    
-    .logoEnd{
-        margin-left: 0%;
-        margin-top: 2%;
-        max-width: 6.5%
-    }
-
-    .logoText{
-        font-size: 150%;
-    }
-
-    .userInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 30%;
-        text-align: center;
-        margin-top: 1%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 82%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-    
-    .friendInputLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 33%;
-        text-align: center;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey;
-        font-size: 82%;
-        padding-bottom: .5%;
-        padding-top: .5%;
-    }
-
-    .locationLabel{
-        font-family: 'Roboto', sans-serif;
-        background-color:rgb(151, 36, 36);
-        color: whitesmoke;
-        width: 50%;
-        text-align: center;
-        padding-left: .5%;
-        margin-bottom: 0%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-color: grey; 
-        font-size: 60%;
-        padding-bottom: 1%;
-        padding-top: .5%;
-    }
-
-    #googleMap{
-        border-top: 1px solid  rgb(151, 36, 36);
-        color: whitesmoke;
-        height: 350px;
-        border-bottom: 2px solid  rgb(151, 36, 36);
-    }
-
-
-    th{
-        font-family: 'Roboto', sans-serif;
-        font-size:20%;
-    }
-
-    #listHeader{
-    font-size: 65%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 3%;
-    padding:3%;
-    border: 0px;
-    background-color: rgb(151, 36, 36);
-    }
-
-    #weatherHeader{
-    font-size: 65%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 1%;
-    padding:3%;
-    border: 0px;
-    background-color: rgb(151, 36, 36);
-    }
-
-    p{
-        font-size: 50%;
-    }
-
-    .footerText{
-        font-family: 'Cabin', sans-serif;
-        color: white;
-        text-align: center;
-        font-size: 83%;
+    .block4{
+        border-radius: 3px;
+        background-color:rgb(250, 233, 136);
+        width: 15%;
+        height:15%;
+        margin-left: 70%;
+        margin-top: 4%;
     }
 }
