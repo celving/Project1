@@ -60,7 +60,7 @@
 
                 <img src="assets/images/T.png" class="logoEnd">
 
-                <div class="row slogan">
+                <div class="row justify-content-center slogan">
                     <div class="col-lg-12">
                         <div class=" animated slideInRight logoText">LET'S FIND YOUR SPOT</div>
                     </div>
@@ -68,7 +68,7 @@
 
                 <!--ROW2-->
                 <div class="row form">
-                    <div class="col-lg-12 col-md-12 form">
+                    <div class="col-lg-12 col-md-12 col-s-12 col-xs-12 form">
                         <form>
                             <div class="animated slideInLeft form-group">
                                 <label for="userInput" class="userInputLabel">User Address</label>
@@ -94,7 +94,7 @@
                             </div>
 
                             <div class="row justify-content-around dropdown">
-                                <div class="col-lg-6 dropdownCol">
+                                <div class="col-lg-6 col-md-6 col-s-12 col-xs-12 dropdownCol">
                                     <a class="animated bounceIn btn btn-secondary dropdown-toggle" href="#"
                                         role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
@@ -108,7 +108,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 submit">
+                                <div class="col-lg-6 col-md-6 col-s-12 col-xs-12 submit">
                                     <button id="addressSubmit" type="submit"
                                         class="animated bounceIn btn btn-danger">Submit</button>
                                 </div>
@@ -118,28 +118,31 @@
                 </div>
 
                 <!--ROW3-->
-                <div class="row justify-content-center map">
+                <div class="animated fadeIn row justify-content-center map">
                     <div class="col map">
                         <div id="googleMap"></div>
                     </div>
                 </div>
 
-                <div class="col-lg-12 submitReset">
+                <div class="col submitReset">
                     <a href="https://celving.github.io/Project1/index.html"><button id="resetPage" type="button"
                             class="animated bounceIn btn btn-danger">New
                             Search</button></a>
                 </div>
                 <!--ROW4-->
-
-                <ul class="list-group">
-                    <li class="list-group-item active" id="listHeader">SPOT Results</li>
-                    <table class="resultTable">
-                        <tr>
-                            <th>SPOT Name</th>
-                            <th>SPOT Address</th>
-                        </tr>
-                    </table>
-                </ul>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <ul class="list-group">
+                            <li class="list-group-item active" id="listHeader">SPOT Results</li>
+                            <table class="resultTable">
+                                <tr>
+                                    <th>SPOT Name</th>
+                                    <th>SPOT Address</th>
+                                </tr>
+                            </table>
+                        </ul>
+                    </div>
+                </div>
 
 
                 <!--ROW6 FOOTER-->
@@ -148,9 +151,7 @@
                     <li class="list-group-item active" id="weatherHeader">SPOT Weather</li>
                     <table class="WeatherTable">
                         <tr>
-                            <th>Temperature</th>
-                            <th>Temperature max</th>
-                            <th>Temperature min</th>
+                            <th>Temp</th>
                             <th>Wind</th>
                             <th>Forecast</th>
                             <th>Humidity</th>
@@ -174,10 +175,18 @@
                     </div>
 
                     <div class="col blocks">
-                        <div href="#" class="block1"></div>
-                        <div href="#" class="block2"></div>
-                        <div href="#" class="block3"></div>
-                        <div href="#" class="block4"></div>
+                        <a href="https://celving.github.io/Responsive-Portfolio/">
+                            <div class="block1"></div>
+                        </a>
+                        <a href="#">
+                            <div class="block2"></div>
+                        </a>
+                        <a href="https://darican.github.io/Responsive-Portfolio/">
+                            <div class="block3"></div>
+                        </a>
+                        <a href="https://donriche.github.io/Basic-Portfolio/">
+                            <div class="block4"></div>
+                        </a>
                     </div>
                 </div>
             </div>
