@@ -150,10 +150,14 @@ $(document).ready(function () {
                             // Transfer content to HTML
 
                             var temperature = Math.ceil(response.main.temp);
+                            var mintemp = Math.ceil(response.main.temp_min);
+                            var maxtemp = Math.ceil(response.main.temp_max);
                             var wind = Math.ceil(response.wind.speed);
                             var humid = Math.ceil(response.main.humidity);
                             var newRow = $("<tr>").append(
                                 $("<td>").text(temperature),
+                                $("<td>").text(maxtemp),
+                                $("<td>").text(mintemp),
                                 $("<td>").text(wind),
                                 $("<td>").text(response.weather[0].description),
                                 $("<td>").text(humid)
